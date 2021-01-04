@@ -22,7 +22,7 @@ categories = ["Animal", "Animal", "Portrait", "Scenic", "Urban Adventure", "Scen
 42.times do
     Photo.create(
         title: photos[i],
-        category: category[i],
+        category: categories[i],
         price: 1
     ).image.attach(
         io: File.open("db/photos/#{photos[i].split(' ').join('_')}.jpg"),
