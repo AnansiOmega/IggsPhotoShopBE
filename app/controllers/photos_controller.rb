@@ -8,7 +8,7 @@ class PhotosController < ApplicationController
 
     def download
         photo = Photo.find(params[:id])
-        send_file "db/photos/#{photo.title}.jpg", :type => "image/jpeg", :disposition => "attachment"
+        send_file "db/photos/#{photo.title.split(' ').join('_')}.jpg", :type => "image/jpeg", :disposition => "attachment"
     end
 
 

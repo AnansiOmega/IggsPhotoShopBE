@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :user_photos
   resources :photos
   resources :users
   post '/auth', to: 'auth#create'
