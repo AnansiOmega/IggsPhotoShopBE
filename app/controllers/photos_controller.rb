@@ -17,4 +17,10 @@ class PhotosController < ApplicationController
         photo.update(likes: params[:like])
         render json: photo
     end
+
+    def update
+        photo = Photo.find(params[:id])
+        photo.update(color: params[:color])
+        render json: photo
+    end
 end

@@ -1,5 +1,5 @@
 class PhotoSerializer < ActiveModel::Serializer
-  attributes :id, :title, :price, :category, :image, :likes
+  attributes :id, :title, :price, :category, :image, :likes, :color
 
 
 
