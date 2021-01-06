@@ -20,8 +20,7 @@ class PhotosController < ApplicationController
 
     def update
         photo = Photo.find(params[:id])
-        photo.update(color: params[:color])
-        photo.save
+        photo.update!(color: params[:color])
         render json: photo
     end
 end
