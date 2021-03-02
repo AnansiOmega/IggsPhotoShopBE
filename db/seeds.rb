@@ -20,14 +20,18 @@ photos = ["Watch Dog", "Over Exposure", "Cold", "A Face In The Tree", "Grand Ent
 categories = ["Animal", "Animal", "Portrait", "Scenic", "Urban Adventure", "Scenic", "Portrait", "Object", "Action", "Scenic", "Object", "Portrait", "Action", "Scenic", "Photoshop", "Object", "Animal", "Action", "Animal", "Scenic", "Action", "Scenic", "Urban Adventure", "Urban Adventure", "Urban Adventure", "Urban Adventure", "Urban Adventure", "Portrait", "Urban Adventure", "Scenic", "Object", "Object", "Object", "Portrait", "Animal", "Scenic", "Scenic", "Urban Adventure", "Urban Adventure", "Photoshop", "Animal", "Portrait"] 
 
 42.times do
+    filename = File.expand_path("db/photos/#{photos[i].split(' ').join('_')}.jpg"))
+    out_filename = File.expand_path("db/photos/#{photos[i].split(' ').join('_')}.jpg")
+    WebP.encode(filename, out_filename)
+
     Photo.create(
         title: photos[i],
         category: categories[i],
         price: 1
     ).image.attach(
-        io: File.open("db/photos/#{photos[i].split(' ').join('_')}.jpg"),
-        filename: "#{photos[i].split(' ').join('_')}.jpg",
-        content_type: 'application/jpg'
+        io: File.open("db/photos/#{photos[i].split(' ').join('_')}.webp"),
+        filename: "#{photos[i].split(' ').join('_')}.webp",
+        content_type: 'application/webp'
     )
     i += 1
 end
