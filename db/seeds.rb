@@ -19,10 +19,13 @@ i = 0
 photos = ["Watch Dog", "Over Exposure", "Cold", "A Face In The Tree", "Grand Entrance", "Snowdventure", "Smoke Shop", "Knick Knacks", "Ford", "A New World", "Vicarious", "A Blast From The Classed", "Double Blacks", "Old Mobile", "Wolves At The Gate", "Wedding", "Dad", "Kentucky Climbin", "Duke", "Mercedes", "Soarin", "Over The Hills", "As Above", "Steps To Heaven", "Take Me To Church", "Inside Looking Out", "The Grove", "Something In The Water", "The Last Sermon", "Range", "Little Guys", "Little Guy", "Hanging Around", "Shopkeep", "Squirrel", "Serenity", "Winter Wonderland", "Goodbye Tomorrow", "Swan_Song", "The Keeper", "Athena", "Bad Posture"] 
 categories = ["Animal", "Animal", "Portrait", "Scenic", "Urban Adventure", "Scenic", "Portrait", "Object", "Action", "Scenic", "Object", "Portrait", "Action", "Scenic", "Photoshop", "Object", "Animal", "Action", "Animal", "Scenic", "Action", "Scenic", "Urban Adventure", "Urban Adventure", "Urban Adventure", "Urban Adventure", "Urban Adventure", "Portrait", "Urban Adventure", "Scenic", "Object", "Object", "Object", "Portrait", "Animal", "Scenic", "Scenic", "Urban Adventure", "Urban Adventure", "Photoshop", "Animal", "Portrait"] 
 
+filename = "/photos/#{photos[i].split(' ').join('_')}.jpg"
+out_filename = "/photos/#{photos[i].split(' ').join('_')}.webp"
+WebP.encode(filename, out_filename)
+
 42.times do
-    puts "/db/photos/#{photos[i].split(' ').join('_')}.jpg"
-    filename = File.expand_path("/db/photos/#{photos[i].split(' ').join('_')}.jpg")
-    out_filename = File.expand_path("/db/photos/#{photos[i].split(' ').join('_')}.webp")
+    # filename = "db/photos/#{photos[i].split(' ').join('_')}.jpg"
+    # out_filename = "db/photos/#{photos[i].split(' ').join('_')}.webp"
     WebP.encode(filename, out_filename)
 
     Photo.create(
