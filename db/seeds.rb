@@ -25,6 +25,7 @@ categories = ["Animal", "Animal", "Portrait", "Scenic", "Urban Adventure", "Scen
 # out_filename = File.expand_path(File.join(File.dirname(__FILE__), "photos/#{photos[i].split(' ').join('_')}.webp"))
 # WebP.encode(filename, out_filename)
 
+
     Photo.create(
         title: photos[i],
         category: categories[i],
