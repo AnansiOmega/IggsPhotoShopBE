@@ -27,9 +27,9 @@ gem 'rack-cors'
 gem 'active_model_serializers', '~> 0.10.0'
 gem 'jwt'
 
-# gem 'sprockets-webp'
+gem 'sprockets-webp'
 
-# gem 'webp-ffi', '~> 0.1.8'
+gem 'webp-ffi', '~> 0.1.8'
 
 gem "aws-sdk-s3", require: false
 
