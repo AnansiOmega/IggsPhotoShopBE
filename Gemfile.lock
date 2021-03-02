@@ -168,11 +168,20 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
+<<<<<<< HEAD
+=======
+    sprockets-webp (0.1.2)
+      webp-ffi (~> 0.1.7)
+>>>>>>> main
     thor (1.1.0)
     thread_safe (0.3.6)
     tzinfo (1.2.9)
       thread_safe (~> 0.1)
+<<<<<<< HEAD
     webp-ffi (0.3.1)
+=======
+    webp-ffi (0.1.8)
+>>>>>>> main
       ffi (>= 1.9.0)
       ffi-compiler (>= 0.1.2)
     websocket-driver (0.7.3)
@@ -197,8 +206,13 @@ DEPENDENCIES
   rails (~> 6.0.3, >= 6.0.3.4)
   spring
   spring-watcher-listen (~> 2.0.0)
+  sprockets-webp
   tzinfo-data
+<<<<<<< HEAD
   webp-ffi
+=======
+  webp-ffi (~> 0.1.8)
+>>>>>>> main
 
 RUBY VERSION
    ruby 2.6.1p33

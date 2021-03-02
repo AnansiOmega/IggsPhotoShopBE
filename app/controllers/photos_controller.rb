@@ -7,7 +7,8 @@ class PhotosController < ApplicationController
 
 
     def download
-        photo = Photo.find(params[:id])
+        photo = Photo.find(params[:id]) ## Photo.title is "A New World"
+    ##             V         "db/photos/A_New_World.jpg"          V
         send_file "db/photos/#{photo.title.split(' ').join('_')}.jpg", :type => "image/jpeg", :disposition => "attachment"
     end
 
