@@ -170,7 +170,7 @@ GEM
     thread_safe (0.3.6)
     tzinfo (1.2.9)
       thread_safe (~> 0.1)
-    webp-ffi (0.1.8)
+    webp-ffi (0.3.1)
       ffi (>= 1.9.0)
       ffi-compiler (>= 0.1.2)
     websocket-driver (0.7.3)
