@@ -20,8 +20,9 @@ photos = ["Watch Dog", "Over Exposure", "Cold", "A Face In The Tree", "Grand Ent
 categories = ["Animal", "Animal", "Portrait", "Scenic", "Urban Adventure", "Scenic", "Portrait", "Object", "Action", "Scenic", "Object", "Portrait", "Action", "Scenic", "Photoshop", "Object", "Animal", "Action", "Animal", "Scenic", "Action", "Scenic", "Urban Adventure", "Urban Adventure", "Urban Adventure", "Urban Adventure", "Urban Adventure", "Portrait", "Urban Adventure", "Scenic", "Object", "Object", "Object", "Portrait", "Animal", "Scenic", "Scenic", "Urban Adventure", "Urban Adventure", "Photoshop", "Animal", "Portrait"] 
 
 42.times do
-    filename = File.expand_path("db/photos/#{photos[i].split(' ').join('_')}.jpg"))
-    out_filename = File.expand_path("db/photos/#{photos[i].split(' ').join('_')}.jpg")
+    puts "/db/photos/#{photos[i].split(' ').join('_')}.jpg"
+    filename = File.expand_path("/db/photos/#{photos[i].split(' ').join('_')}.jpg")
+    out_filename = File.expand_path("/db/photos/#{photos[i].split(' ').join('_')}.webp")
     WebP.encode(filename, out_filename)
 
     Photo.create(
