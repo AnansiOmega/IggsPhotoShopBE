@@ -1,8 +1,22 @@
 class PhotosController < ApplicationController
 
     def index
-        photos = Photo.all
-        render json: photos
+        if params[:page] == '1'
+        photos1 = Photo.all[0...10]
+        render json: photos1
+        end
+        if params[:page] == '2'
+        photos2 = Photo.all[11...20]
+        render json: photos2
+        end
+        if params[:page] == '3'
+        photos3 = Photo.all[21...30]
+        render json: photos3
+        end
+        if params[:page] == '4'
+        photos4 = Photo.all[31...41]
+        render json: photos4
+        end
     end
 
 
@@ -18,7 +32,7 @@ class PhotosController < ApplicationController
         photo.update(likes: params[:like])
         render json: photo
     end
-
+# V this was used to programmitcally update each photos backdrop color
     def update
         photo = Photo.find(params[:id])
         photo.update!(color: params[:color])

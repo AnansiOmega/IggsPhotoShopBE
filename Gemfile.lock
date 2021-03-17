@@ -198,7 +198,7 @@ DEPENDENCIES
   spring
   spring-watcher-listen (~> 2.0.0)
   tzinfo-data
-  webp-ffi
+  webp-ffi (~> 0.3.1)
 
 RUBY VERSION
    ruby 2.6.1p33
